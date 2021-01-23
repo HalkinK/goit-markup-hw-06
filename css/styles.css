@@ -971,13 +971,6 @@ p {
 }
 
 .comment-area {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-
-  color: rgba(117, 117, 117, 0.5);
-
   width: 448px;
   height: 120px;
 
@@ -995,6 +988,15 @@ p {
 .comment-area:focus {
   outline: none;
   border-color: var(--accent-color);
+}
+
+.comment-area::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .comment {
@@ -1019,8 +1021,13 @@ p {
 }
 
 .checkbox {
-  padding: 0 40px;
+  position: relative;
+
+  padding-right: 51px;
+  padding-left: 52px;
   margin-bottom: 30px;
+
+  height: auto;
 }
 
 .terms,
@@ -1032,12 +1039,32 @@ p {
 }
 
 .checkbox-text {
+  display: inline-block;
+  margin-left: 24px;
   color: #757575;
 }
 
 .terms {
   text-decoration: underline;
   color: var(--accent-color);
+}
+
+.checkbox-icon {
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-55%) translateX(330%);
+
+  width: 16px;
+  height: 15px;
+
+  cursor: pointer;
+}
+
+.old-checkbox:checked ~ .checkbox-icon {
+  background-color: red;
 }
 
 .send-btn {
