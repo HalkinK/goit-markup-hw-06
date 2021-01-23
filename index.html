@@ -436,8 +436,72 @@
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="modal-button" data-modal-close>&#10006;</button>
+            <button class="modal-close" data-modal-close>&#10006;</button>
+
+            <div class="backdrop-header">
+                <h1 class="backdrop-text">Оставьте свои данные, мы вам перезвоним</h1>
+            </div>
+
+            <form class="backdrop-form">
+                <div class="form-field name">
+                    <label>
+                        <div class="user-info">Имя</div>
+                        <div class="input-icon">
+                            <input type="text" name="name" class="modal-input">
+                            <svg class="modal-icon">
+                                <use href="./images/symbol-form.svg#icon-person-black"></use>
+                            </svg>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-field tel">
+                    <label>
+                        <div class="user-info">Телефон</div>
+                        <div class="input-icon">
+                            <input type="tel" name="tel" class="modal-input">
+                            <svg class="modal-icon">
+                                <use href="./images/symbol-form.svg#icon-phone-black"></use>
+                            </svg>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-field email">
+                    <label>
+                        <div class="user-info">Почта</div>
+                        <div class="input-icon">
+                            <input type="email" name="email" class="modal-input">
+                            <svg class="modal-icon">
+                                <use href="./images/symbol-form.svg#icon-email-black"></use>
+                            </svg>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-field comment">
+                    <label>
+                        <div class="user-comment">Комментарий</div>
+                        <textarea name="comment" rows="5" class="comment-area" placeholder="Введите текст"></textarea>
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>                        
+                       <input type="checkbox" name="agree" >
+                       <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю</span> 
+                       <a class="terms" href="">Условия договора</a>
+                      
+                    </label>
+                </div>
+
+
+            </form>
+
+            <button class="send-btn" type="button">Отправить</button>
         </div>
+
+
     </div>
     <script src="./js/modal.js"></script>
 </body>
